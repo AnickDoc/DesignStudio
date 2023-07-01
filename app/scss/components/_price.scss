@@ -1,0 +1,98 @@
+.price {
+  padding: 100px 0;
+  background: #110268;
+
+  &__subtitle {
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__title {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 63px;
+  }
+
+  &__inner {
+    display: flex;
+    column-gap: 16px;
+    justify-content: center;
+  }
+
+  &__card {
+    max-width: 400px;
+    border-radius: 20px 0px 20px 20px;
+    background: #D8D1FE;
+    padding: 57px 37px 37px;
+    color: #000000;
+
+    &--2 {
+      background: #453797;
+      border-radius: 0px 20px 20px 20px;
+      color: #fff;
+    }
+  }
+
+  &__card-name {
+    @extend %monts-600;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+  }
+
+  &__card-cost {
+    @extend %monts-700;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 26px;
+    text-transform: capitalize;
+  }
+
+  &__card-desc {
+    margin-bottom: 40px;
+  }
+
+  ul.price__card-list {
+    margin-bottom: 48px;
+  }
+
+  &__card-item {
+    margin-bottom: 16px;
+    padding-left: 55px;
+    position: relative;
+
+    &:after {
+      content:"";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background: url('../images/icons/check.svg') center / cover no-repeat;
+    }
+
+    &--check-white {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background: url('../images/icons/check-white.svg') center / cover no-repeat;
+      }
+    }
+  }
+
+  &__card-btn--2 {
+    &:hover {
+      background: #D8D1FE;
+      color: #000;
+    }
+  }
+}

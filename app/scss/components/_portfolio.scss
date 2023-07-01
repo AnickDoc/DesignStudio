@@ -1,0 +1,47 @@
+.portfolio {
+  padding: 50px 0 100px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    margin-right: 70px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__swiper {
+    width: 92%;
+    height: 325px;
+  }
+
+  &__slide {
+    img {
+      border-radius: 20px;
+      margin: 0 auto;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    top: -185px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button-prev {
+    position: relative;
+    left: 0;
+  }
+
+  &__button-next {
+    position: relative;
+    right: 0;
+  }
+}

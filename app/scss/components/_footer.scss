@@ -1,0 +1,145 @@
+.footer {
+  padding-top: 50px;
+  &__contact {}
+
+  &__contact-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact-name {
+    max-width: 536px;
+  }
+
+  &__contact-subtitle {}
+
+  &__contact-title {}
+
+  &__contact-form {
+    flex: 0 1 624px;
+  }
+
+  &__main {
+    padding: 35px 0 45px;
+    margin-top: -295px;
+    background: #110268;
+  }
+
+  &__main-inner {}
+
+  &__main-logo {
+    display: block;
+    margin-bottom: 70px;
+  }
+
+  ul.footer__main-list {
+    margin-bottom: 85px;
+  }
+
+  &__main-item {
+    margin-bottom: 25px;
+    color: #FFFFFF;
+    padding-left: 55px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 30px;
+      height: 32px;
+      background: url('../images/icons/mail.svg') center / cover no-repeat;
+    }
+
+    &--phone:after {
+      background: url('../images/icons/phone.svg') center / cover no-repeat;
+    }
+
+    &--map:after {
+      background: url('../images/icons/map-pin.svg') center / cover no-repeat;
+    }
+  }
+
+  &__main-link {
+    color: inherit;
+  }
+
+  &__nav {
+    
+  }
+
+  &__nav-list {
+    display: flex;
+    color: #fff;
+    justify-content: flex-end;
+    
+  }
+
+  &__nav-item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-link {
+    color: inherit;
+  }
+
+  &__bottom {
+    background: #110268;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px 0;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom-police {
+    display: flex;
+    color: #fff;
+  }
+
+  &__bottom-text {
+    margin-right: 14px;
+  }
+
+  &__bottom-social {}
+}
+
+.form {
+  background: #D8D1FE;
+  border-radius: 20px;
+  padding: 72px 40px 40px;
+  &__label {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px 30px;
+    border: transparent;
+  }
+
+  &__textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px 30px;
+    border: transparent;
+    min-height: 160px;
+    resize: none;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

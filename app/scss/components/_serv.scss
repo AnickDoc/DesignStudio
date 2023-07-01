@@ -1,0 +1,63 @@
+.serv {
+  padding: 50px 0;
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+  }
+
+  &__card {
+    position: relative;
+    padding: 24px;
+    padding-bottom: 75px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 50px 0px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      width: 36px;
+      height: 25px;
+      background: url('../images/icons/arrow.svg') center / contain no-repeat;
+    }
+  }
+
+  &__card-img {
+    margin-bottom: 36px;
+    position: relative;
+    width: 88px;
+    height: 88px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card-title {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  &__card-text {}
+}

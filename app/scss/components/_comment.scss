@@ -1,0 +1,115 @@
+.comment {
+  padding: 100px 0 50px;
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 63px;
+  }
+
+  &__swiper {
+    width: 90%;
+    height: 550px;
+  }
+
+  &__wrapper {}
+
+  &__slide {
+  }
+
+  &__slide-inner {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 111px 104px 68px 148px;
+    display: flex;
+    align-items: center;
+    column-gap: 72px;
+  }
+
+  &__slide-img {
+    flex: 0 0 296px;
+    height: 296px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px 20px;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 296px;
+      height: 296px;
+      top: -40px;
+      left: -48px;
+      border: 1px solid #D8D1FE;
+      border-radius: 0px 20px;
+      z-index: 0;
+    }
+  }
+
+  &__slide-content {
+    flex: 0 1 608px;
+  }
+
+  &__slide-text {
+    margin-bottom: 60px;
+    padding-top: 70px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 24px;
+      background: url('../images/icons/quote.svg') center / cover no-repeat;
+    }
+  }
+
+  &__slide-name {
+    @extend %monts-600;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+
+  &__slide-post {}
+
+  &__pagination {}
+
+  &__buttons {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top: -270px;
+  }
+
+  &__button-prev {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+
+  &__button-next {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+
+  &__scrollbar {}
+}

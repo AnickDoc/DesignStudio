@@ -1,0 +1,54 @@
+@mixin _1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin _992 {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin _768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin _480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+%hel-600 {
+  font-family: "helvetica_bold", sans-serif;
+  font-weight: 600;
+}
+
+%hel-400 {
+  font-family: "helvetica_regular",
+  sans-serif;
+  font-weight: 400;
+}
+
+%monts-800 {
+  font-family: "Montserrat-ExtraBold",
+  sans-serif;
+  font-weight: 800;
+}
+
+%monts-600 {
+  font-family: "Montserrat-SemiBold",
+  sans-serif;
+  font-weight: 600;
+}
+
+%monts-700 {
+  font-family: "Montserrat-Bold",
+  sans-serif;
+  font-weight: 700;
+}
+
+
