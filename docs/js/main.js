@@ -1,7 +1,7 @@
 //Swiper:
-new Swiper('.portfolio__swiper', {
-  slidesPerView: 3,
-  spaceBetween: 16,
+let swiperPortfolio = new Swiper('.portfolio__swiper', {
+  slidesPerView: 1,
+  spaceBetween: 10,
   pagination: {
     el: '.swiper-pagination',
   },
@@ -10,9 +10,19 @@ new Swiper('.portfolio__swiper', {
     prevEl: '.swiper-button-prev',
   },
   watchOverflow: true,
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    }
+  }
 });
 
-new Swiper('.comment__swiper', {
+let swiperComment = new Swiper('.comment__swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
   pagination: {
@@ -25,33 +35,43 @@ new Swiper('.comment__swiper', {
 });
 
 //Filter
-const filters = document.querySelectorAll('button[data-filter]');
+const btns = document.querySelectorAll('.portfolio__btn');
+const slides = document.querySelectorAll('.portfolio__slide');
 
-for (let filter of filters) {
-  filter.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    let catId = filter.getAttribute('data-filter');
-    let workCat = document.querySelectorAll('.portfolio__slide');
-
-    workCat.forEach(function (c) {
-
-      if (catId === 'all') {
-        c.classList.remove('hide');
-      } else {
-        if (c.getAttribute('data-cat') !== catId) {
-          c.classList.add('hide');
-        } else {
-          c.classList.remove('hide');
-        }
-      }
-
-    })
-
+function activeDelete(arr) {
+  arr.forEach(item => {
+    if (item.classList.contains('active')) {
+      item.classList.remove('active');
+    }
   });
 }
 
-//burger
+function hideDelete(arr) {
+  arr.forEach(item => {
+    if (item.classList.contains('hide')) {
+      item.classList.remove('hide');
+    }
+  });
+}
+
+btns.forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    activeDelete(btns);
+    btn.classList.add('active');
+
+    hideDelete(slides);
+    slides.forEach(slide => {
+      if (btn.dataset.filter == 'all') {
+        hideDelete(slides);
+      } else if (slide.dataset.cat !== btn.dataset.filter) {
+        slide.classList.add('hide');
+      }
+    });
+    swiperPortfolio.update();
+  });
+});
+
+//Burger
 $(".header__burger").on("click", function () {
   $(this).toggleClass('open');
   if ($(this).hasClass('open')) {

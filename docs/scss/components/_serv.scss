@@ -1,6 +1,10 @@
 .serv {
   padding: 50px 0;
 
+  @include _480 {
+    padding: 30px 0;
+  }
+
   &__subtitle {
     text-align: center;
   }
@@ -8,12 +12,28 @@
   &__title {
     text-align: center;
     margin-bottom: 60px;
+
+    @include _992 {
+      margin-bottom: 40px;
+    }
+
+    @include _768 {
+      margin-bottom: 25px;
+    }
   }
 
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
+
+    @include _992 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include _480 {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -31,6 +51,10 @@
       width: 36px;
       height: 25px;
       background: url('../images/icons/arrow.svg') center / contain no-repeat;
+
+      @include _992 {
+        width: 25px;
+      }
     }
   }
 
@@ -39,6 +63,12 @@
     position: relative;
     width: 88px;
     height: 88px;
+
+    @include _992 {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
 
     img {
       position: absolute;
@@ -57,6 +87,14 @@
     line-height: 30px;
     text-transform: uppercase;
     margin-bottom: 14px;
+
+    @include _992 {
+      font-size: 22px;
+    }
+
+    @include _768 {
+      font-size: 18px;
+    }
   }
 
   &__card-text {}

@@ -158,6 +158,10 @@ body {
 
 .swiper-scrollbar {}
 
+.swiper-pagination-bullets {
+  bottom: -40px !important; 
+}
+
 .swiper-pagination-bullet {
   background: #453797;
   border-radius: 3px;
