@@ -89,6 +89,7 @@ body {
 
   @include _768 {
     padding: 15px 20px;
+    font-size: 14px;
   }
 }
 
@@ -122,6 +123,10 @@ body {
   font-size: 20px;
   line-height: 23px;
   margin-bottom: 5px;
+
+  @include _768 {
+    font-size: 16px;
+  }
 }
 
 .title {
@@ -130,6 +135,15 @@ body {
   font-size: 50px;
   line-height: 61px;
   color: #000000;
+
+  @include _992 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  @include _768 {
+    font-size: 22px;
+  }
 }
 
 .hide {
