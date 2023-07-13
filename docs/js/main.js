@@ -60,3 +60,11 @@ $(".header__burger").on("click", function () {
     $('.header__list').removeClass('open')
   }
 });
+
+
+$(document).on('click', function (e) {
+  if ($(".header__burger").has(e.target).length == 0) {
+    $('.header__list').removeClass('open')
+    $(".header__burger").removeClass('open');
+  }
+});

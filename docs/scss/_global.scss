@@ -44,7 +44,7 @@ body {
   box-sizing: border-box;
   border-radius: 15px;
   background-color: #5D43FB;
-  font-family:'Montserrat-Bold', sans-serif;
+  font-family: 'Montserrat-Bold', sans-serif;
   font-weight: 700;
   border-color: transparent;
   padding: 22px 30px;
@@ -68,16 +68,16 @@ body {
 
   &--transparent {
     padding: 15px 30px;
-    font-family:'helvetica_regular', sans-serif;
-    font-weight: 400;
+    font-family: 'helvetica_regular', sans-serif;
+    font-weight: 600;
     color: #453797;
     border: 1px solid #453797;
     background-color: transparent;
 
     &:hover {
-      color: #110268;
+      color: #fff;
       border-color: #110268;
-      background-color: transparent;
+      background-color: #453797;
     }
 
     &:active {
@@ -85,6 +85,10 @@ body {
       border-color: #000;
       background-color: transparent;
     }
+  }
+
+  @include _768 {
+    padding: 15px 20px;
   }
 }
 
@@ -139,12 +143,14 @@ body {
 }
 
 .swiper-scrollbar {}
+
 .swiper-pagination-bullet {
   background: #453797;
   border-radius: 3px;
   width: 14px;
   height: 7px;
 }
+
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 47px;
 }

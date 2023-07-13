@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Digital Creative Agency</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon-32x32.png">
 </head>
 
 <body>
@@ -14,33 +16,31 @@
       <div class="container">
         <div class="header__top">
           <a href="/" class="header__logo"><img src="images/logo-dark.png" alt="logo" /></a>
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="/" class="header__link">Главная</a>
+            </li>
+            <li class="header__item">
+              <a href="#about" class="header__link">О нас</a>
+            </li>
+            <li class="header__item">
+              <a href="#serv" class="header__link">Услуги</a>
+            </li>
+            <li class="header__item">
+              <a href="#portfolio" class="header__link">Портфолио</a>
+            </li>
+            <li class="header__item">
+              <a href="#price" class="header__link">Цены</a>
+            </li>
+            <li class="header__item">
+              <a href="#contact" class="header__link">Контакты</a>
+            </li>
+          </ul>
+          <button type="button" class="header__btn btn btn--transparent">Обсудить проект</button>
           <div class="header__burger">
             <span></span>
             <span></span>
             <span></span>
-          </div>
-          <div class="header__inner">
-            <ul class="header__list">
-              <li class="header__item">
-                <a href="/" class="header__link disable">Главная</a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">О нас</a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">Услуги</a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">Портфолио</a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">Цены</a>
-              </li>
-              <li class="header__item">
-                <a href="/" class="header__link">Контакты</a>
-              </li>
-            </ul>
-            <button type="button" class="header__btn btn btn--transparent">Обсудить проект</button>
           </div>
         </div>
         <div class="header__main">
@@ -54,7 +54,7 @@
           </div>
           <div class="header__main-right">
             <div class="header__main-img">
-              <img src="images/header-bg.jpg" alt="фото ноутбука" />
+              <img src="images/header-bg.png" alt="фото ноутбука" />
             </div>
             <ul class="header__main-social social">
               <li class="social__item">
@@ -100,8 +100,8 @@
         </div>
       </div>
     </header>
-    <main class="main">
-      <section class="about">
+    <!--<main class="main">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__inner">
             <div class="about__img">
@@ -119,7 +119,7 @@
           </div>
         </div>
       </section>
-      <section class="serv">
+      <section class="serv" id="serv">
         <div class="container">
           <p class="serv__subtitle subtitle">Что мы делаем</p>
           <h2 class="serv__title title">Наши услуги</h2>
@@ -201,7 +201,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <div class="portfolio__top">
             <div class="portfolio__name">
@@ -241,7 +241,7 @@
           </div>
         </div>
       </section>
-      <section class="price">
+      <section class="price" id="price">
         <div class="container">
           <p class="price__subtitle subtitle">Стоимость нашей работы</p>
           <h2 class="price__title title">Цены</h2>
@@ -340,7 +340,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="footer__contact">
         <div class="container">
           <div class="footer__contact-inner">
@@ -461,7 +461,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer>-->
   </div>
   <script src="js/main.min.js"></script>
 </body>
