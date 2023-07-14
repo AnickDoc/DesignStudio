@@ -1,6 +1,10 @@
 .comment {
   padding: 100px 0 50px;
 
+  @include _992 {
+    padding: 50px 0 30px;
+  }
+
   &__subtitle {
     text-align: center;
   }
@@ -8,16 +12,27 @@
   &__title {
     text-align: center;
     margin-bottom: 63px;
+
+    @include _480 {
+      margin-bottom: 30px;
+    }
   }
 
   &__swiper {
     width: 90%;
     height: 550px;
-  }
 
-  &__wrapper {}
+    @include _992 {
+      height: 100%;
+    }
 
-  &__slide {
+    @include _768 {
+      width: 85%;
+    }
+
+    @include _480 {
+      width: 80%;
+    }
   }
 
   &__slide-inner {
@@ -27,12 +42,38 @@
     display: flex;
     align-items: center;
     column-gap: 72px;
+
+    @include _992 {
+      padding: 60px;
+      column-gap: 40px;
+    }
+
+    @include _768 {
+      flex-direction: column;
+      padding: 50px 30px 30px;
+    }
+
+    @include _480 {
+      padding: 20px;
+    }
   }
 
   &__slide-img {
     flex: 0 0 296px;
     height: 296px;
     position: relative;
+
+    @include _768 {
+      height: 255px;
+      flex: none;
+      max-width: 255px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    @include _480 {
+      margin-bottom: 25px;
+    }
 
     img {
       position: absolute;
@@ -55,17 +96,39 @@
       border: 1px solid #D8D1FE;
       border-radius: 0px 20px;
       z-index: 0;
+
+      @include _992 {
+        top: -20px;
+        left: -20px;
+      }
+
+      @include _480 {
+        content: none;
+      }
     }
   }
 
   &__slide-content {
     flex: 0 1 608px;
+
+    @include _768 {
+      flex: none;
+    }
   }
 
   &__slide-text {
     margin-bottom: 60px;
     padding-top: 70px;
     position: relative;
+
+    @include _992 {
+      margin-bottom: 30px;
+      padding-top: 50px;
+    }
+
+    @include _480 {
+      padding-top: 30px;
+    }
 
     &:after {
       content: "";
@@ -86,11 +149,11 @@
     line-height: 30px;
     text-transform: uppercase;
     margin-bottom: 7px;
+
+    @include _480 {
+      font-size: 20px;
+    }
   }
-
-  &__slide-post {}
-
-  &__pagination {}
 
   &__buttons {
     display: flex;
@@ -110,6 +173,4 @@
     left: 0;
     right: 0;
   }
-
-  &__scrollbar {}
 }

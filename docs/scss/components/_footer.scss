@@ -1,39 +1,65 @@
 .footer {
   padding-top: 50px;
-  &__contact {}
+
+  @include _480 {
+    padding-top: 20px;
+  }
 
   &__contact-inner {
     display: flex;
     justify-content: space-between;
+
+    @include _768 {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   }
 
   &__contact-name {
     max-width: 536px;
+
+    @include _768 {
+      margin-bottom: 30px;
+    }
   }
-
-  &__contact-subtitle {}
-
-  &__contact-title {}
 
   &__contact-form {
     flex: 0 1 624px;
+
+    @include _768 {
+      flex: none;
+    }
   }
 
   &__main {
     padding: 35px 0 45px;
     margin-top: -295px;
     background: #110268;
-  }
 
-  &__main-inner {}
+    @include _768 {
+      margin-top: 0;
+    }
+
+    @include _480 {
+      padding: 30px 0;
+    }
+  }
 
   &__main-logo {
     display: block;
     margin-bottom: 70px;
+
+    @include _768 {
+      margin-bottom: 30px;
+    }
   }
 
   ul.footer__main-list {
     margin-bottom: 85px;
+
+    @include _768 {
+      margin-bottom: 35px;
+    }
   }
 
   &__main-item {
@@ -41,6 +67,10 @@
     color: #FFFFFF;
     padding-left: 55px;
     position: relative;
+
+    @include _480 {
+      margin-bottom: 15px;
+    }
 
     &:after {
       content: "";
@@ -65,19 +95,24 @@
     color: inherit;
   }
 
-  &__nav {
-    
-  }
-
   &__nav-list {
     display: flex;
     color: #fff;
     justify-content: flex-end;
-    
+
+    @include _768 {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
   }
 
   &__nav-item {
     margin-right: 40px;
+
+    @include _768 {
+      margin-bottom: 20px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -97,24 +132,49 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include _480 {
+      display: block;
+    }
   }
 
   &__bottom-police {
     display: flex;
     color: #fff;
+
+    @include _480 {
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 
   &__bottom-text {
     margin-right: 14px;
   }
 
-  &__bottom-social {}
+  &__bottom-social {
+    justify-content: center;
+
+    .social__item:first-child {
+      margin-left: 0;
+    }
+  }
 }
 
 .form {
   background: #D8D1FE;
   border-radius: 20px;
   padding: 72px 40px 40px;
+
+  @include _768 {
+    padding: 30px;
+  }
+
+  @include _480 {
+    padding: 20px;
+  }
+
   &__label {
     display: block;
     width: 100%;
@@ -127,6 +187,10 @@
     border-radius: 15px;
     padding: 25px 30px;
     border: transparent;
+
+    @include _480 {
+      padding: 20px;
+    }
   }
 
   &__textarea {
@@ -137,6 +201,10 @@
     border: transparent;
     min-height: 160px;
     resize: none;
+
+    @include _480 {
+      padding: 20px;
+    }
   }
 
   &__btn {
